@@ -1,9 +1,155 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><title>Whereabouts</title><meta name="robots" content="noindex"><meta name="p:domain_verify" content="b3792e1484281784ce0f8d38db85bfed"/></head>
-<body style="font: 16px/1.5 Georgia, serif; text-align: center; padding: 3em 1em;">
-<h1>Whereabouts</h1>
-<p>Murder Sudoku — 50 Murder Mysteries from Ashcombe Manor, by Victor Knox.</p>
-<footer style="margin-top: 4em; font-size: .9em;"><a href="/impressum/">Impressum</a> · <a href="/datenschutz/">Datenschutz / Privacy</a></footer>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Whereabouts: Murder Sudoku · 50 murder mysteries from Ashcombe Manor</title>
+<meta name="description" content="Murder mystery logic puzzles from a 1931 English country house. Place one suspect in every row and every column: the one alone with the body did it.">
+<link rel="canonical" href="https://whereaboutspuzzles.com/">
+<meta name="p:domain_verify" content="b3792e1484281784ce0f8d38db85bfed"/>
+<meta name="theme-color" content="#0d1524">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Whereabouts">
+<meta property="og:title" content="Whereabouts: Murder Sudoku">
+<meta property="og:description" content="50 murder mysteries from Ashcombe Manor. Place one suspect in every row and every column: the one alone with the body did it.">
+<meta property="og:url" content="https://whereaboutspuzzles.com/">
+<meta property="og:image" content="https://whereaboutspuzzles.com/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="The Whereabouts wordmark beside a page of the book: a floor plan of a country house with six suspects.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.ico" sizes="48x48">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/fonts/limelight.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/josefin-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to the page</a>
+<main id="main">
+
+<section class="hero">
+  <div class="wrap">
+    <div class="text">
+      <div class="mark"><svg viewBox="0 0 120 120" role="img" aria-label="The Whereabouts mark: a keyhole figure standing in one lit room"><rect width="120" height="120" rx="22" fill="#1a2843"/><path fill="#0d1524" d="M18 0.367A22 22 0 0 1 22 0H22.5V18H18ZM102 18H119.633A22 22 0 0 1 120 22V22.5H102ZM97.5 102H102V119.633A22 22 0 0 1 98 120H97.5ZM18 97.5V102H0.367A22 22 0 0 1 0 98V97.5ZM82.5 0H87V18H82.5ZM102 82.5H120V87H102ZM33 102H37.5V120H33ZM0 33H18V37.5H0Z"/><path fill="#0d1524" d="M18 18H102V102H18V90H22.5V97.5H97.5V22.5H22.5V75H18Z"/><rect x="22.5" y="22.5" width="75" height="75" fill="#f2b84b"/><circle cx="60" cy="42" r="13" fill="#0d1524"/><path fill="#0d1524" d="M54.5 51V55.6C54.5 57.8 52.9 58.8 50.6 59.8C48 61 46.4 62.6 45.9 65.2L41.5 90Q60 88 78.5 90L74.1 65.2C73.6 62.6 72 61 69.4 59.8C67.1 58.8 65.5 57.8 65.5 55.6V51Z"/></svg></div>
+      <h1 class="wordmark">Whereabouts</h1>
+      <div class="band">Murder Sudoku</div>
+      <p class="sub">50 murder mysteries from Ashcombe Manor</p>
+      <p class="strap">Where were you when the lights went out?</p>
+      <p class="by">Victor Knox</p>
+      <div class="actions">
+        <a class="btn" href="https://whereaboutspuzzles.etsy.com/listing/4588601306/murder-sudoku-mystery-puzzle-book-pdf-50">Tablet edition <span class="nw">on Etsy <span class="arrow" aria-hidden="true">&rarr;</span></span></a>
+        <span class="btn btn-soon" aria-disabled="true">Paperback on Amazon <small>coming soon</small></span>
+      </div>
+    </div>
+    <div class="cover sunburst">
+      <picture>
+        <source type="image/webp" srcset="/img/cover-360.webp 360w, /img/cover-700.webp 700w" sizes="(min-width: 60rem) 19rem, 15rem">
+        <img src="/img/cover-360.jpg" srcset="/img/cover-360.jpg 360w, /img/cover-700.jpg 700w" sizes="(min-width: 60rem) 19rem, 15rem" width="360" height="544" alt="The cover of Whereabouts: Murder Sudoku. One lit room, a library, in a dark house, with seven suspects in a row below.">
+      </picture>
+    </div>
+  </div>
+</section>
+
+<section class="story">
+  <div class="wrap">
+    <p class="kicker">Ashcombe Manor, 1931</p>
+    <p class="big">Every Friday for a year, Lord Ashcombe's guests played a game. The lamps went out for one minute. When they came back on, one guest lay dead, and nobody had moved.</p>
+    <p>From what each guest said, work out where everyone stood, and who was alone with the body. Fifty nights at Ashcombe Manor, one murderer each time.</p>
+  </div>
+</section>
+
+<section class="rule">
+  <div class="wrap">
+    <p class="kicker">How to play</p>
+    <h2>One rule, three steps</h2>
+    <ol>
+      <li><p><strong>Read what each guest said.</strong> Every statement is true.</p></li>
+      <li><p><strong>Place one guest in every row and every column.</strong> No numbers, only people.</p></li>
+      <li><p><strong>The guest alone with the body is the murderer.</strong> Name them.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="inside">
+  <div class="wrap">
+    <p class="kicker">A look inside</p>
+    <h2>A whole house on every page</h2>
+    <div class="cases">
+      <figure>
+        <div class="sheet"><a href="/img/practice-1280.jpg">
+          <picture>
+            <source type="image/webp" srcset="/img/practice-720.webp 720w, /img/practice-1280.webp 1280w" sizes="(min-width: 48rem) 30vw, 100vw">
+            <img src="/img/practice-720.jpg" srcset="/img/practice-720.jpg 720w, /img/practice-1280.jpg 1280w" sizes="(min-width: 48rem) 30vw, 100vw" width="720" height="540" loading="lazy" alt="The practice case: a floor plan with a drawing room, a gallery, a hall and a study, five suspects and five statements.">
+          </picture>
+        </a></div>
+        <figcaption><b>The practice case</b>Solved for you in the book, one step at a time.</figcaption>
+      </figure>
+      <figure>
+        <div class="sheet"><a href="/img/case-2-1280.jpg">
+          <picture>
+            <source type="image/webp" srcset="/img/case-2-720.webp 720w, /img/case-2-1280.webp 1280w" sizes="(min-width: 48rem) 30vw, 100vw">
+            <img src="/img/case-2-720.jpg" srcset="/img/case-2-720.jpg 720w, /img/case-2-1280.jpg 1280w" sizes="(min-width: 48rem) 30vw, 100vw" width="720" height="540" loading="lazy" alt="Case 2, Which Side of the Oak?: a garden with a great oak, a shed, a kitchen and a hall, six suspects and seven statements.">
+          </picture>
+        </a></div>
+        <figcaption><b>Case 2 · Gentle</b>Which Side of the Oak?</figcaption>
+      </figure>
+      <figure>
+        <div class="sheet"><a href="/img/case-16-1280.jpg">
+          <picture>
+            <source type="image/webp" srcset="/img/case-16-720.webp 720w, /img/case-16-1280.webp 1280w" sizes="(min-width: 48rem) 30vw, 100vw">
+            <img src="/img/case-16-720.jpg" srcset="/img/case-16-720.jpg 720w, /img/case-16-1280.jpg 1280w" sizes="(min-width: 48rem) 30vw, 100vw" width="720" height="540" loading="lazy" alt="Case 16, What the Lake Saw: a lake with a jetty, a study, a bedroom and a shed, six suspects and eight statements.">
+          </picture>
+        </a></div>
+        <figcaption><b>Case 16 · Standard</b>What the Lake Saw</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="contents">
+  <div class="wrap">
+    <p class="kicker">In the book</p>
+    <h2>Gentle to expert, spring to winter</h2>
+    <ul class="features">
+      <li>50 cases over four seasons, spring 1931 to winter 1932: twelve gentle ones to start, ten for experts at the end.</li>
+      <li>A practice case solved step by step, with a picture after every step.</li>
+      <li>Three levels of hints for every case, then the full solution, step by step.</li>
+      <li>Every case checked by our own solver software: one answer, never a guess.</li>
+      <li>The Ledger: write in each murderer's initial, and the shaded boxes spell out a hidden message.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="editions">
+  <div class="wrap">
+    <p class="kicker">Two editions</p>
+    <h2>Solve it on a tablet, or in pen</h2>
+    <div class="cards">
+      <div class="edition">
+        <h3>The tablet edition</h3>
+        <p>One case to a screen, held sideways: the plan to write on, the statements beside it. Tap to a hint and straight back. Print a page at home if you like.</p>
+        <a class="btn" href="https://whereaboutspuzzles.etsy.com/listing/4588601306/murder-sudoku-mystery-puzzle-book-pdf-50">Tablet edition <span class="nw">on Etsy <span class="arrow" aria-hidden="true">&rarr;</span></span></a>
+      </div>
+      <div class="edition">
+        <h3>The paperback</h3>
+        <p>Every case as a two-page spread in color, with a grid big enough to solve in pen. 6&nbsp;x&nbsp;9&nbsp;inches, 170 pages.</p>
+        <span class="btn btn-soon" aria-disabled="true">Paperback on Amazon <small>coming soon</small></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="brand"><span class="mark" aria-hidden="true"><svg viewBox="0 0 120 120"><rect width="120" height="120" rx="22" fill="#1a2843"/><rect x="22.5" y="22.5" width="75" height="75" fill="#f2b84b"/><circle cx="60" cy="42" r="13" fill="#0d1524"/><path fill="#0d1524" d="M54.5 51V55.6C54.5 57.8 52.9 58.8 50.6 59.8C48 61 46.4 62.6 45.9 65.2L41.5 90Q60 88 78.5 90L74.1 65.2C73.6 62.6 72 61 69.4 59.8C67.1 58.8 65.5 57.8 65.5 55.6V51Z"/></svg></span>Whereabouts</div>
+    <p class="made">How it was made: the cases come from our own puzzle software, and a solver that reasons the way a person does checked every one. The pictures were made with an AI image tool, then retouched; the words were drafted with AI help, then edited and proofread.</p>
+    <nav aria-label="Legal"><a href="/impressum/">Impressum</a><a href="/datenschutz/">Datenschutz / Privacy</a></nav>
+    <p class="legal">© 2026 Csars Ventures GbR</p>
+  </div>
+</footer>
 </body>
 </html>
