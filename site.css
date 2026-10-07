@@ -211,6 +211,10 @@ h3 {
 .hero .cover { width: min(15rem, 70%); margin-top: 2.75rem; }
 .hero .cover img { box-shadow: 0 22px 50px rgba(0, 0, 0, 0.6); }
 
+/* Under the three steps: the practice case in the web player (/play/practice/, AL-019). */
+.rule .play { margin-top: 2.5rem; }
+.rule .play p { margin: 0 0 1rem; color: var(--soft); }
+
 .story p { max-width: var(--measure); }
 .story .big { font-size: 1.3rem; line-height: 1.5; color: var(--cream); }
 
