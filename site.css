@@ -256,8 +256,10 @@ h3 {
 }
 
 .editions .cards { display: grid; gap: 1.25rem; margin-top: 1.5rem; }
-.edition { padding: 1.5rem 1.25rem; border: 1px solid rgba(201, 164, 92, 0.45); background: rgba(26, 40, 67, 0.55); }
+.edition { padding: 1.5rem 1.25rem; border: 1px solid rgba(201, 164, 92, 0.45); background: rgba(26, 40, 67, 0.55);
+  display: flex; flex-direction: column; }
 .edition p { color: var(--soft); }
+.edition p:last-of-type { flex-grow: 1; } /* the buttons line up at the foot of their cards */
 .edition .btn { margin-top: 1.25rem; }
 
 /* ---- Footer (every page: the Impressum and the Datenschutzerklärung) ---------- */
