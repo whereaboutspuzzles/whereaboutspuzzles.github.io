@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- The pages Google may list. The Impressum, the Datenschutzerklärung, /review/, /rezension/ and /pins/ stay out (they carry noindex
+     or are not pages); add each new public page here (/sample/, /week/01/ ...). -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://whereaboutspuzzles.com/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://whereaboutspuzzles.com/play/practice/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://whereaboutspuzzles.com/sample/</loc><lastmod>2026-10-14</lastmod></url>
+  <url><loc>https://whereaboutspuzzles.com/week/01/</loc><lastmod>2026-10-16</lastmod></url>
+  <url><loc>https://whereaboutspuzzles.com/play/week-01/</loc><lastmod>2026-10-16</lastmod></url>
 </urlset>
