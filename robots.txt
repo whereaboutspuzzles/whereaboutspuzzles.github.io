@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+# The sample case is the email signup's gift (AL-018): its player and files stay out of search (its answer and
+# thank-you pages carry noindex, which Google must be allowed to read).
+Disallow: /play/sample/
+Disallow: /sample/files/
 
 Sitemap: https://whereaboutspuzzles.com/sitemap.xml
