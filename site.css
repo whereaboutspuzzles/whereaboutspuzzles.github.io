@@ -284,6 +284,128 @@ h3 {
 .site-foot nav a:hover { color: var(--amber); }
 .site-foot .legal { margin: 0; font-size: 0.82rem; }
 
+/* ---- The legal pages: /impressum/ and /datenschutz/ (AL-055) ------------------- */
+/* Their words are the law's and Recht & Geld's: this only dresses them. Kept apart from the rules below, with its own
+   wider-screen rules, so it merges beside other pages' additions. */
+
+/* The slim bar back to the home page, the same as on /week/NN/ and /sample/ (AL-018). When both have reached main,
+   the second copy of these four rules can go. */
+.topbar { padding: 0.9rem 0; border-bottom: 1px solid rgba(201, 164, 92, 0.25); background: var(--deep); }
+.topbar a {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  color: var(--cream); text-decoration: none;
+  font: 400 1.15rem/1 var(--deco); letter-spacing: 0.04em; text-transform: uppercase;
+}
+.topbar a:hover { color: var(--amber-hi); }
+.topbar .mark { width: 1.75rem; height: 1.75rem; }
+
+.legal-page {
+  padding: 2.5rem 0 4rem;
+  background: radial-gradient(ellipse 110% 40rem at 50% 0%, var(--glow) 0%, var(--night) 70%);
+  overflow-wrap: break-word;
+}
+.legal-page .legal-part, .legal-page hr { max-width: 44rem; }
+/* German compounds (Datenschutz-Aufsichtsbehörde) break at a syllable on a phone rather than run off it. */
+.legal-page p, .legal-page li { hyphens: auto; -webkit-hyphens: auto; }
+.legal-page h1 {
+  margin: 0 0 1rem;
+  font: 400 clamp(1.8rem, 7.5vw, 2.75rem)/1.15 var(--serif);
+  color: var(--cream);
+  text-wrap: balance;
+}
+.legal-page h2 {
+  margin: 2.25rem 0 0.9rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(201, 164, 92, 0.3);
+  font: 400 clamp(1.25rem, 4.8vw, 1.45rem)/1.3 var(--serif);
+  color: var(--cream);
+  text-wrap: balance;
+  scroll-margin-top: 1rem;
+}
+.legal-page .n { color: var(--amber); }
+.legal-page p { color: var(--soft); }
+.legal-page code {
+  padding: 0.05em 0.35em;
+  background: rgba(26, 40, 67, 0.85);
+  border: 1px solid rgba(201, 164, 92, 0.3);
+  font: 0.88em/1 ui-monospace, Consolas, "Courier New", monospace;
+  color: var(--cream);
+}
+.legal-page ul { list-style: none; margin: 0 0 1em; padding: 0; display: grid; gap: 0.8rem; }
+.legal-page ul li { position: relative; padding-left: 1.6rem; color: var(--soft); }
+.legal-page ul li::before {
+  content: "";
+  position: absolute; left: 0.2rem; top: 0.62em;
+  width: 0.5rem; height: 0.5rem;
+  background: var(--amber);
+  transform: rotate(45deg);
+}
+.legal-page hr {
+  height: 1px; margin: 4rem 0 3rem; border: 0;
+  background: linear-gradient(90deg, rgba(201, 164, 92, 0), var(--brass) 20%, var(--brass) 80%, rgba(201, 164, 92, 0));
+}
+.legal-page .stand { margin-top: 2.5rem; font-style: italic; color: var(--dim); }
+
+/* "English below": a small outlined button to the other half of the page. */
+.legal-page .lang { margin: 0 0 2rem; }
+.legal-page .lang a {
+  display: inline-block;
+  padding: 0.7rem 1rem 0.55rem;
+  border: 1px solid rgba(201, 164, 92, 0.7);
+  color: var(--cream);
+  font: 700 0.78rem/1.2 var(--caps); letter-spacing: 0.16em; text-transform: uppercase;
+  text-decoration: none;
+}
+.legal-page .lang a:hover { border-color: var(--amber); color: var(--amber-hi); background: rgba(242, 184, 75, 0.1); }
+
+/* The Datenschutzerklärung's sections, listed under its title: the headings themselves, as links. */
+.legal-page .toc {
+  margin: 0 0 1rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid rgba(201, 164, 92, 0.45);
+  background: rgba(26, 40, 67, 0.55);
+}
+.legal-page .toc ol { list-style: none; margin: 0; padding: 0; }
+.legal-page .toc li + li { border-top: 1px solid rgba(201, 164, 92, 0.18); }
+.legal-page .toc a {
+  display: grid; grid-template-columns: 2rem 1fr; align-items: baseline;
+  padding: 0.45rem 0;
+  color: var(--soft); text-decoration: none; line-height: 1.4;
+}
+.legal-page .toc a:hover { color: var(--amber-hi); }
+.legal-page .toc a:hover .n { color: var(--amber-hi); }
+
+/* The Impressum: each entry on a card, like the editions on the home page. */
+.legal-page .entries { display: grid; gap: 1rem; }
+.legal-page .entry { padding: 1.25rem 1.25rem 0.35rem; border: 1px solid rgba(201, 164, 92, 0.45); background: rgba(26, 40, 67, 0.55); }
+.legal-page .entry h2 {
+  margin: 0 0 0.6rem; padding: 0; border: 0;
+  /* In the case it is written in: capitals would show "gemäß" as "GEMÄSS". */
+  font: 700 0.95rem/1.4 var(--caps); letter-spacing: 0.05em;
+  color: var(--amber);
+}
+.legal-page .entry p { color: var(--cream); font-size: 1.05rem; }
+
+@media (min-width: 48rem) {
+  .legal-page { padding: 4rem 0 5rem; }
+  .legal-page .toc { padding: 1.25rem 1.75rem; }
+  .legal-page .entries { grid-template-columns: 1fr 1fr; }
+  .legal-page .entry:first-child { grid-row: span 2; }
+}
+/* Wide enough for both: the text on the left at a reading width, its sections beside it, staying in view. */
+@media (min-width: 64rem) {
+  .legal-page .with-toc { display: grid; grid-template-columns: minmax(0, 44rem) 17rem; column-gap: 3rem; max-width: none; }
+  .legal-page .with-toc > * { grid-column: 1; }
+  .legal-page .with-toc > .toc {
+    grid-column: 2; grid-row: 1 / span 80; align-self: start;
+    position: sticky; top: 1.5rem;
+    max-height: calc(100vh - 3rem); overflow-y: auto;
+    margin: 0.4rem 0 0; padding: 0.75rem 1.25rem;
+  }
+  .legal-page .with-toc + hr { max-width: none; }
+  .legal-page .with-toc > .toc a { grid-template-columns: 1.75rem 1fr; padding: 0.45rem 0; font-size: 0.92rem; }
+}
+
 /* ---- A plain page (404 and the pages to come) --------------------------------- */
 
 .plain { min-height: 70vh; display: grid; place-items: center; text-align: center; padding: 4rem 0; }
