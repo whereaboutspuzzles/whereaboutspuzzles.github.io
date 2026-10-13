@@ -416,15 +416,7 @@ h3 {
 
 /* ---- The free cases: /week/NN/ and /sample/ (AL-018) ----------------------------- */
 
-/* A slim bar back to the home page, on every page that is not the home page. */
-.topbar { padding: 0.9rem 0; border-bottom: 1px solid rgba(201, 164, 92, 0.25); background: var(--deep); }
-.topbar a {
-  display: inline-flex; align-items: center; gap: 0.6rem;
-  color: var(--cream); text-decoration: none;
-  font: 400 1.15rem/1 var(--deco); letter-spacing: 0.04em; text-transform: uppercase;
-}
-.topbar a:hover { color: var(--amber-hi); }
-.topbar .mark { width: 1.75rem; height: 1.75rem; }
+/* The slim bar back to the home page (.topbar) is in the legal pages' section above (AL-055), shared by all. */
 
 .case-head { padding-bottom: 2rem; background: radial-gradient(ellipse 110% 90% at 50% 0%, var(--glow) 0%, var(--night) 70%); }
 .case-head h1 {
