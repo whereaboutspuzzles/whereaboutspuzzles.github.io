@@ -29,6 +29,9 @@
 <a class="skip" href="#main">Skip to the page</a>
 <main id="main">
 
+<!-- AL-069 (Oct 15): the Halloween line, until Oct 31. /go/halloween/ forwards to the Etsy listing and is counted. -->
+<p class="halloween" style="margin:0;padding:0.7rem 1rem;text-align:center;background:#e8762b;color:#120c08;font:700 0.95rem var(--caps);letter-spacing:0.06em;text-transform:uppercase"><a href="/go/halloween/" style="color:inherit;text-decoration:none">New for Halloween: <span style="text-decoration:underline">Murder in the Dark, 20 murder mysteries</span> <span aria-hidden="true">&rarr;</span></a></p>
+
 <section class="hero">
   <div class="wrap">
     <div class="text">
@@ -39,6 +42,7 @@
       <p class="strap">Where were you when the lights went out?</p>
       <p class="by">Victor Knox</p>
       <div class="actions">
+        <a class="btn" href="/week/01/">Play this week's case free <span class="arrow" aria-hidden="true">&rarr;</span></a>
         <a class="btn" href="https://whereaboutspuzzles.etsy.com/listing/4588601306/murder-sudoku-mystery-puzzle-book-pdf-50">Tablet edition <span class="nw">on Etsy <span class="arrow" aria-hidden="true">&rarr;</span></span></a>
         <a class="btn" href="https://www.amazon.com/dp/B0HM5DPV6X">Paperback <span class="nw">on Amazon <span class="arrow" aria-hidden="true">&rarr;</span></span></a>
       </div>
@@ -192,5 +196,14 @@
   </div>
 </footer>
 <script src="/signup.js" defer></script>
+<script>
+// AL-069: a profile link's ?utm_source= rides along to /go/ links, so the counter sees which platform's visitors went
+// on to the shop. It reads the page's own address only; nothing is stored or sent.
+(function () {
+  var s = new URLSearchParams(location.search).get('utm_source');
+  if (!s) return;
+  document.querySelectorAll('a[href^="/go/"]').forEach(function (a) { a.href = a.getAttribute('href') + '?utm_source=' + encodeURIComponent(s); });
+})();
+</script>
 </body>
 </html>
