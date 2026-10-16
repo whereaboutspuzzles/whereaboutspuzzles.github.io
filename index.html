@@ -42,7 +42,7 @@
       <p class="strap">Where were you when the lights went out?</p>
       <p class="by">Victor Knox</p>
       <div class="actions">
-        <a class="btn" href="/week/01/">Play this week's case free <span class="arrow" aria-hidden="true">&rarr;</span></a>
+        <a class="btn" href="#this-week" data-this-week>Play this week's case free <span class="arrow" aria-hidden="true">&rarr;</span></a>
         <a class="btn" href="https://whereaboutspuzzles.etsy.com/listing/4588601306/murder-sudoku-mystery-puzzle-book-pdf-50">Tablet edition <span class="nw">on Etsy <span class="arrow" aria-hidden="true">&rarr;</span></span></a>
         <a class="btn" href="https://www.amazon.com/dp/B0HM5DPV6X">Paperback <span class="nw">on Amazon <span class="arrow" aria-hidden="true">&rarr;</span></span></a>
       </div>
@@ -56,7 +56,7 @@
   </div>
 </section>
 
-<section class="week">
+<section class="week" id="this-week">
   <div class="wrap">
     <div class="text">
       <p class="kicker">Free every Friday</p>
@@ -197,6 +197,13 @@
 </footer>
 <script src="/signup.js" defer></script>
 <script>
+// AL-069: the first button plays the case the "case of the week" section shows, so it moves with that section when a
+// new week goes up, and nobody has to change it by hand. Without a script it scrolls to that section.
+(function () {
+  var week = document.querySelector('#this-week .actions a.btn');
+  var first = document.querySelector('[data-this-week]');
+  if (week && first) first.href = week.getAttribute('href');
+})();
 // AL-069: a profile link's ?utm_source= rides along to /go/ links, so the counter sees which platform's visitors went
 // on to the shop. It reads the page's own address only; nothing is stored or sent.
 (function () {
