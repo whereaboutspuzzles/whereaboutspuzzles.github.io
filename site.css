@@ -497,6 +497,11 @@ h3 {
   display: block; margin: 0 0 0.35rem;
   font: 700 0.74rem/1.35 var(--caps); letter-spacing: 0.18em; text-transform: uppercase; color: var(--kraft-ink);
 }
+/* A seasonal case wears its pack's colour (case-files.json `dress`): the Halloween weeks, Murder in the Dark's
+   pumpkin, so the file and the pack's Etsy photo 1 look alike. */
+.file.dress-halloween {
+  --kraft: #e2914a; --kraft-hi: #eca462; --kraft-lo: #cd7834; --kraft-back: #b05a1c; --kraft-ink: #3a1804;
+}
 /* The stamp sits in the corner: the words beside it keep clear of it. */
 .stamp ~ .file-kicker { padding-right: 5.2rem; }
 .file-title {
