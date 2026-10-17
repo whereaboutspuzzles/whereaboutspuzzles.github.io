@@ -522,3 +522,245 @@ h3 {
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
 }
+
+/* ---- The case files, the shelf and the letter (AL-072) ------------------------------ */
+/* One look per job (Alexander, Oct 17: "everything looks the same"): the free cases are case files (kraft folders,
+   the day they came out on a typed tab, the case page peeking out, a stamp on the newest); the shop is a shelf of
+   covers (the packs drawn as their Etsy photo 1 draws them); the email signup is a letter. The rest stays the dark
+   house. Kept apart from the rules above, with its own wider-screen rules, so it merges beside other pages' additions. */
+
+:root {
+  --typed: "Courier New", Courier, ui-monospace, monospace;
+  --kraft: #d7b677;
+  --kraft-hi: #e4c78f;
+  --kraft-lo: #c49f5b;
+  --kraft-back: #b98f4c;
+  --kraft-ink: #4a3412;
+  --stamp: #a3241c;
+}
+
+/* The Halloween line at the very top (AL-069), until the date in its data-until. */
+.season-line {
+  margin: 0; padding: 0.7rem 1rem; text-align: center;
+  background: #e8762b; color: #120c08;
+  font: 700 0.9rem/1.35 var(--caps); letter-spacing: 0.06em; text-transform: uppercase;
+}
+.season-line a { color: inherit; text-decoration: none; }
+.season-line a span { text-decoration: underline; text-underline-offset: 0.18em; }
+
+/* The home page's top: the brand, small, then the question. */
+.lead { padding: 1.4rem 0 2.75rem; background: radial-gradient(ellipse 110% 70% at 50% 0%, var(--glow) 0%, var(--night) 70%); }
+.lead .brand { display: flex; align-items: center; justify-content: center; gap: 0.75rem; margin-bottom: 1.4rem; }
+.lead .brand .mark { width: 2.6rem; height: 2.6rem; flex: none; }
+.lead .brand .names { display: flex; flex-direction: column; align-items: flex-start; gap: 0.4rem; }
+.lead .wordmark { font-size: clamp(1.6rem, 7.6vw, 2.8rem); }
+.lead .band { font-size: 0.72rem; letter-spacing: 0.3em; padding: 0.42em 0.8em 0.26em; padding-right: calc(0.8em - 0.3em); }
+.lead .ask { text-align: center; margin: 0 auto 1.1rem; max-width: 34rem; }
+.lead .ask h2 { margin: 0 0 0.3rem; font-size: clamp(1.6rem, 6.6vw, 2.5rem); }
+.lead .ask p { margin: 0; color: var(--soft); text-wrap: balance; }
+.lead .all { margin: 1.4rem auto 0; max-width: 34rem; text-align: center; }
+.lead .all p { margin: 0; }
+.lead .how { color: var(--dim); font-size: 0.98rem; line-height: 1.5; margin-bottom: 0.4rem; text-wrap: balance; }
+.more-link {
+  display: inline-flex; align-items: center; gap: 0.5em; padding: 0.6rem 0.2rem;
+  color: var(--amber); text-decoration: none;
+  font: 700 0.85rem/1.2 var(--caps); letter-spacing: 0.16em; text-transform: uppercase;
+}
+.more-link:hover { color: var(--amber-hi); }
+.more-link .arrow { font-family: var(--serif); letter-spacing: 0; }
+
+/* A case file: the folder's back with its tab, the case page clipped in, the front with the words. The whole file is
+   one link to the case's player. */
+.files { list-style: none; margin: 0; padding: 0; display: grid; gap: 2.25rem; }
+.file { position: relative; display: block; max-width: 34rem; padding-top: 4.6rem; color: var(--ink); text-decoration: none; }
+.file:hover { color: var(--ink); }
+.file::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 1.55rem; bottom: 0.5rem;
+  background: var(--kraft-back); border-radius: 0 0.6rem 0.6rem 0.6rem;
+}
+.file-tab {
+  position: absolute; left: 0; top: 0; z-index: 1;
+  padding: 0.35rem 0.7rem 0.55rem; background: var(--kraft-back); border-radius: 0.6rem 0.6rem 0 0;
+}
+.file-tab span {
+  display: block; padding: 0.22rem 0.5rem 0.16rem; background: var(--paper);
+  font: 700 0.8rem/1.2 var(--typed); letter-spacing: 0.03em; text-transform: uppercase; color: var(--ink);
+  white-space: nowrap;
+}
+.file-paper {
+  position: absolute; z-index: 1; top: 0.6rem; left: 40%; right: 0.85rem; height: 6rem; overflow: hidden;
+  background: #fff; transform: rotate(1.6deg); transform-origin: 0 100%;
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.35);
+}
+.file-paper img { width: 100%; }
+.file-clip { position: absolute; z-index: 3; top: 0.05rem; right: 1.8rem; width: 0.85rem; height: 2.8rem; }
+.file-front {
+  position: relative; z-index: 2; display: block;
+  padding: 1.3rem 1.2rem 1.35rem; border-radius: 0.2rem 0.2rem 0.6rem 0.6rem;
+  background: linear-gradient(172deg, var(--kraft-hi), var(--kraft) 45%, var(--kraft-lo));
+  box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.35) inset, 0 18px 40px rgba(0, 0, 0, 0.5);
+}
+.file-kicker {
+  display: block; margin: 0 0 0.35rem;
+  font: 700 0.74rem/1.35 var(--caps); letter-spacing: 0.18em; text-transform: uppercase; color: var(--kraft-ink);
+}
+.file-title {
+  display: block; margin: 0 0 0.45rem; padding-right: 4.2rem;
+  font: 400 clamp(1.55rem, 6.4vw, 2rem)/1.15 var(--serif); letter-spacing: 0; text-transform: none; color: var(--ink);
+}
+.file-line { display: block; margin: 0 0 0.7rem; font: italic 1rem/1.5 var(--serif); color: #3b301f; }
+.file-facts {
+  display: block; margin: 0 0 1.05rem;
+  font: 700 0.72rem/1.4 var(--caps); letter-spacing: 0.16em; text-transform: uppercase; color: var(--kraft-ink);
+}
+.file-go {
+  display: inline-flex; align-items: center; gap: 0.55em; min-height: 3.1rem; padding: 0.85rem 1.3rem 0.65rem;
+  background: var(--night); color: var(--cream);
+  font: 700 0.9rem/1.2 var(--caps); letter-spacing: 0.13em; text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); transition: background-color 0.15s;
+}
+.file-go .arrow { font-family: var(--serif); letter-spacing: 0; }
+.file:hover .file-go, .file:focus-visible .file-go { background: var(--oxblood); }
+.file:focus-visible { outline-offset: 6px; }
+/* The newest case's stamp, in red ink across the corner. */
+.stamp {
+  position: absolute; z-index: 3; top: 0.95rem; right: 0.8rem;
+  padding: 0.32rem 0.5rem 0.14rem; border: 3px solid var(--stamp); border-radius: 0.25rem;
+  color: var(--stamp); font: 700 1.05rem/1 var(--caps); letter-spacing: 0.16em; text-transform: uppercase;
+  transform: rotate(-9deg); opacity: 0.88;
+}
+
+/* The subscribers' case: an envelope, sealed with the mark, opened by signing up. */
+.envelope {
+  position: relative; max-width: 34rem; padding: 5.1rem 1.2rem 1.4rem;
+  background: var(--paper-2); color: var(--ink); border-radius: 0.3rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5); scroll-margin-top: 1rem;
+}
+.envelope::before {
+  content: ""; position: absolute; left: 0; right: 0; top: 0; height: 3.6rem;
+  background: #e6d9bd; clip-path: polygon(0 0, 100% 0, 50% 100%);
+  border-radius: 0.3rem 0.3rem 0 0;
+}
+.envelope .seal {
+  position: absolute; left: 50%; top: 2.1rem; width: 3rem; height: 3rem; margin-left: -1.5rem;
+  display: grid; place-items: center; border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #c0392f, #7a1914 75%);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
+}
+.envelope .seal svg { width: 1.35rem; height: 1.35rem; display: block; }
+.envelope .file-tab { position: static; display: inline-block; padding: 0; margin: 0.4rem 0 0.9rem; background: none; }
+.envelope .file-tab span { background: #fff; border: 1px solid var(--line); }
+.envelope .file-title { padding-right: 0; }
+.envelope p { color: var(--ink-soft); }
+
+/* A form on paper (the envelope, the letter): the signup form's colours for the light ground. */
+.on-paper .signup-form label { color: var(--ink); }
+.on-paper .signup-form .status { color: var(--oxblood); }
+.on-paper .signup-form.done .status { color: var(--ink); }
+.on-paper .signup-form .fine { color: var(--ink-soft); }
+.on-paper .signup-form .fine a { color: var(--oxblood); }
+.on-paper .signup-form input[type="email"] { background: #fff; }
+.on-paper .btn { box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18); }
+
+/* The Friday letter: cream paper with an airmail edge and a stamp. */
+.letter { background: var(--deep); }
+.letter-card {
+  position: relative; max-width: 42rem; padding: 2rem 1.3rem 1.6rem;
+  background: var(--paper); color: var(--ink);
+  border-top: 7px solid transparent;
+  border-image: repeating-linear-gradient(135deg, var(--oxblood) 0 14px, var(--paper) 14px 22px, var(--navy) 22px 36px, var(--paper) 36px 44px) 7;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+}
+.letter-card .kicker { color: var(--oxblood); }
+.letter-card h2 { color: var(--ink); padding-right: 4.5rem; }
+.letter-card p { color: var(--ink-soft); }
+.letter-stamp {
+  position: absolute; top: 1.4rem; right: 1.2rem; width: 3.6rem; height: 4.2rem; padding: 0.35rem;
+  background: var(--paper); border: 2px dashed var(--brass); transform: rotate(4deg);
+}
+.letter-stamp svg { width: 100%; height: 100%; display: block; }
+
+/* The shelf: what to buy once one case is not enough. Each item is its cover and its buttons, one tap to the store
+   (through /go/, so the counter sees the tap). */
+.shelf { background: linear-gradient(var(--night), var(--deep)); }
+.shelf .intro { max-width: var(--measure); }
+.products { list-style: none; margin: 1.75rem 0 0; padding: 0; display: grid; gap: 1.1rem; }
+.product {
+  display: grid; grid-template-columns: 6.25rem 1fr; gap: 1.1rem; align-items: start;
+  padding: 1.1rem; background: rgba(26, 40, 67, 0.6); border: 1px solid rgba(201, 164, 92, 0.3);
+}
+/* The cover's box is the pack drawing's measure: its sizes are in cqw, hundredths of the box's width. */
+.product .cover { display: block; container-type: inline-size; }
+.product .cover img { width: 100%; box-shadow: 0 8px 18px rgba(0, 0, 0, 0.55); }
+.product h3 { margin: 0 0 0.3rem; font: 400 1.22rem/1.25 var(--serif); letter-spacing: 0; text-transform: none; color: var(--cream); }
+.product .what { margin: 0 0 0.45rem; font-size: 0.95rem; line-height: 1.5; color: var(--soft); }
+.product .facts { margin: 0 0 0.8rem; font: 700 0.7rem/1.4 var(--caps); letter-spacing: 0.16em; text-transform: uppercase; color: var(--brass); }
+.product .buy { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.btn-small {
+  display: inline-flex; align-items: center; gap: 0.45em; min-height: 2.75rem; padding: 0.65rem 0.9rem 0.5rem;
+  background: var(--amber); color: var(--night); text-decoration: none;
+  font: 700 0.76rem/1.2 var(--caps); letter-spacing: 0.12em; text-transform: uppercase;
+}
+.btn-small:hover { background: var(--amber-hi); color: var(--night); }
+.btn-small .arrow { font-family: var(--serif); letter-spacing: 0; }
+.ribbon {
+  display: inline-block; margin: 0 0 0.45rem; padding: 0.32rem 0.5rem 0.2rem;
+  background: #e8762b; color: #120c08;
+  font: 700 0.66rem/1 var(--caps); letter-spacing: 0.14em; text-transform: uppercase;
+}
+
+/* A pack's cover, drawn as its Etsy photo 1 is: the folder in the pack's colour, the brass rays, the band, the
+   keyhole and the count. No case on it (rule 4). */
+.pack {
+  --c: #b5541f;
+  position: relative; display: flex; flex-direction: column; align-items: center; gap: 6cqw;
+  aspect-ratio: 2 / 3; padding: 13cqw 5cqw 0;
+  background:
+    radial-gradient(closest-side at 50% 62%, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0) 70%),
+    repeating-conic-gradient(from 0deg at 50% 62%, rgba(255, 255, 255, 0.07) 0deg 4deg, rgba(255, 255, 255, 0) 4deg 12deg),
+    var(--c);
+  box-shadow: inset 0 0 0 3px var(--c), inset 0 0 0 4px rgba(201, 164, 92, 0.85), 0 8px 18px rgba(0, 0, 0, 0.55);
+}
+.pack .pw { font: 400 12.4cqw/1 var(--deco); letter-spacing: 0; text-transform: uppercase; color: var(--cream); white-space: nowrap; }
+.pack .pb {
+  padding: 2.6cqw 3.5cqw 1.6cqw; background: var(--amber); color: var(--night); text-align: center;
+  font: 700 7.4cqw/1.12 var(--caps); letter-spacing: 0.06em; text-transform: uppercase;
+}
+.pack .kh { width: 40cqw; margin-top: 4cqw; }
+.pack .kh svg { display: block; width: 100%; height: auto; }
+.pack .pn {
+  position: absolute; right: -7cqw; bottom: -7cqw; width: 38cqw; height: 38cqw; border-radius: 50%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  background: var(--amber); color: var(--night); box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+  font: 700 15cqw/0.9 var(--caps);
+}
+.pack .pn small { font: 700 5.6cqw/1.3 var(--caps); letter-spacing: 0.1em; text-transform: uppercase; }
+
+/* The case files page. */
+.files-head { padding: 2.25rem 0 1.5rem; background: radial-gradient(ellipse 110% 90% at 50% 0%, var(--glow) 0%, var(--night) 70%); }
+.files-head h1 { margin: 0 0 0.9rem; font: 400 clamp(2rem, 8vw, 3rem)/1.1 var(--serif); color: var(--cream); }
+.files-head .lede { color: var(--soft); }
+.files-list { padding: 1.5rem 0 3.5rem; background: var(--night); }
+.topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.topbar a.topbar-link { font: 700 0.78rem/1.2 var(--caps); letter-spacing: 0.16em; color: var(--amber); }
+
+@media (min-width: 48rem) {
+  .files { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem 2rem; align-items: start; }
+  .products { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .letter-card { padding: 2.5rem 2.5rem 2rem; }
+}
+@media (min-width: 60rem) {
+  .lead { padding: 3rem 0 4rem; }
+  .lead .wrap { display: grid; grid-template-columns: 1fr 1.05fr; column-gap: 3.5rem; align-items: center; }
+  .lead .brand { justify-content: flex-start; margin-bottom: 2rem; }
+  .lead .brand .mark { width: 3.4rem; height: 3.4rem; }
+  .lead .band { font-size: 0.9rem; }
+  .lead .ask { text-align: left; margin: 0; }
+  .lead .ask h2 { font-size: 2.6rem; }
+  .lead .ask p { font-size: 1.2rem; }
+  .lead .all { text-align: left; margin: 1.5rem 0 0; }
+  .lead .newest { grid-column: 2; grid-row: 1 / span 3; }
+  .products { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .product { grid-template-columns: 1fr; }
+  .product .cover { width: 72%; margin: 0 auto 0.4rem; }
+}
