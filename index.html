@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Whereabouts: Murder Sudoku · 50 murder mysteries from Ashcombe Manor</title>
-<meta name="description" content="Murder mystery logic puzzles from a 1931 English country house. Place one suspect in every row and every column: the one alone with the body did it.">
+<meta name="description" content="Murder mystery logic puzzles from a 1931 English country house. Place one suspect in every row and every column: the one alone with the body did it. A free case every Friday.">
 <link rel="canonical" href="https://whereaboutspuzzles.com/">
 <meta name="p:domain_verify" content="b3792e1484281784ce0f8d38db85bfed"/>
 <meta name="theme-color" content="#0d1524">
@@ -23,167 +23,125 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preload" href="/fonts/limelight.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/josefin-sans.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/site.css?v=0f3135e4">
+<link rel="stylesheet" href="/site.css?v=3521b0c7">
 </head>
 <body>
 <a class="skip" href="#main">Skip to the page</a>
+<!-- AL-072: one look per job and one next step. The blocks between case-files markers are written by
+     scripts/site/case-files.ts from scripts/site/case-files.json: change those, never the blocks. The first button is
+     the newest case's own, so it follows each Friday's case by itself (AL-069's rule). -->
+<!-- case-files:season -->
+<p class="season-line" data-until="2026-11-01"><a href="/go/halloween/">New for Halloween: <span>Murder in the Dark, 20 murder mysteries</span> <span class="arrow" aria-hidden="true">&rarr;</span></a></p>
+<!-- /case-files:season -->
 <main id="main">
 
-<!-- AL-069 (Oct 15): the Halloween line, until Oct 31. /go/halloween/ forwards to the Etsy listing and is counted. -->
-<p class="halloween" style="margin:0;padding:0.7rem 1rem;text-align:center;background:#e8762b;color:#120c08;font:700 0.95rem var(--caps);letter-spacing:0.06em;text-transform:uppercase"><a href="/go/halloween/" style="color:inherit;text-decoration:none">New for Halloween: <span style="text-decoration:underline">Murder in the Dark, 20 murder mysteries</span> <span aria-hidden="true">&rarr;</span></a></p>
-
-<section class="hero">
+<section class="lead" id="this-week">
   <div class="wrap">
-    <div class="text">
+    <div class="brand">
       <div class="mark"><svg viewBox="0 0 120 120" width="32" height="32" role="img" aria-label="The Whereabouts mark: a keyhole figure standing in one lit room"><rect width="120" height="120" rx="22" fill="#1a2843"/><path fill="#0d1524" d="M18 0.367A22 22 0 0 1 22 0H22.5V18H18ZM102 18H119.633A22 22 0 0 1 120 22V22.5H102ZM97.5 102H102V119.633A22 22 0 0 1 98 120H97.5ZM18 97.5V102H0.367A22 22 0 0 1 0 98V97.5ZM82.5 0H87V18H82.5ZM102 82.5H120V87H102ZM33 102H37.5V120H33ZM0 33H18V37.5H0Z"/><path fill="#0d1524" d="M18 18H102V102H18V90H22.5V97.5H97.5V22.5H22.5V75H18Z"/><rect x="22.5" y="22.5" width="75" height="75" fill="#f2b84b"/><circle cx="60" cy="42" r="13" fill="#0d1524"/><path fill="#0d1524" d="M54.5 51V55.6C54.5 57.8 52.9 58.8 50.6 59.8C48 61 46.4 62.6 45.9 65.2L41.5 90Q60 88 78.5 90L74.1 65.2C73.6 62.6 72 61 69.4 59.8C67.1 58.8 65.5 57.8 65.5 55.6V51Z"/></svg></div>
-      <h1 class="wordmark">Whereabouts</h1>
-      <div class="band">Murder Sudoku</div>
-      <p class="sub">50 murder mysteries from Ashcombe Manor</p>
-      <p class="strap">Where were you when the lights went out?</p>
-      <p class="by">Victor Knox</p>
-      <div class="actions">
-        <a class="btn" href="#this-week" data-this-week>Play this week's case free <span class="arrow" aria-hidden="true">&rarr;</span></a>
-        <a class="btn" href="https://whereaboutspuzzles.etsy.com/listing/4588601306/murder-sudoku-mystery-puzzle-book-pdf-50">Tablet edition <span class="nw">on Etsy <span class="arrow" aria-hidden="true">&rarr;</span></span></a>
-        <a class="btn" href="https://www.amazon.com/dp/B0HM5DPV6X">Paperback <span class="nw">on Amazon <span class="arrow" aria-hidden="true">&rarr;</span></span></a>
+      <div class="names">
+        <h1 class="wordmark">Whereabouts</h1>
+        <div class="band">Murder Sudoku</div>
       </div>
     </div>
-    <div class="cover sunburst">
-      <picture>
-        <source type="image/webp" srcset="/img/cover-360.webp 360w, /img/cover-700.webp 700w" sizes="(min-width: 60rem) 19rem, 15rem">
-        <img src="/img/cover-360.jpg" srcset="/img/cover-360.jpg 360w, /img/cover-700.jpg 700w" sizes="(min-width: 60rem) 19rem, 15rem" width="360" height="544" alt="The cover of Whereabouts: Murder Sudoku. One lit room, a library, in a dark house, with seven suspects in a row below.">
-      </picture>
+    <div class="ask">
+      <h2>Can you find the murderer?</h2>
+      <p>A new murder mystery every Friday, free.</p>
+    </div>
+    <div class="newest">
+<!-- case-files:newest -->
+<a class="file" href="/play/week-01/">
+  <div class="file-tab"><span>October 16, 2026</span></div>
+  <div class="file-paper"><picture><source type="image/webp" srcset="/week/01/case-720.webp"><img src="/week/01/case-720.jpg" width="720" height="540" loading="lazy" alt=""></picture></div><svg class="file-clip" viewBox="0 0 12 40" aria-hidden="true"><path d="M8.5 11V31a3.5 3.5 0 0 1-7 0V6a4.5 4.5 0 0 1 9 0v27" fill="none" stroke="#a4823f" stroke-width="2" stroke-linecap="round"/></svg>
+  <div class="file-front">
+    <span class="stamp" data-until="2026-10-23">New</span>
+    <p class="file-kicker">Case of the week · No. 1</p>
+    <h3 class="file-title">The Empty Chair</h3>
+    <p class="file-line">A wet October evening, with rain on every window. When the lamps came back on, Harold lay in the Dining Room, and nobody had moved an inch.</p>
+    <p class="file-facts">Gentle · Six suspects</p>
+    <span class="file-go">Play this week's case free <span class="arrow" aria-hidden="true">&rarr;</span></span>
+  </div>
+</a>
+<!-- /case-files:newest -->
+    </div>
+    <div class="all">
+      <p class="how">Place one suspect in every row and every column. The one alone with the body did it.</p>
+      <p><a class="more-link" href="/cases/">Every free case <span class="arrow" aria-hidden="true">&rarr;</span></a></p>
     </div>
   </div>
 </section>
 
-<section class="week" id="this-week">
-  <div class="wrap">
-    <div class="text">
-      <p class="kicker">Free every Friday</p>
-      <h2>Miss Pell's case of the week</h2>
-      <p><b>No. 1 · The Empty Chair.</b> A wet October evening, with rain on every window. When the lamps came back on, Harold lay in the Dining Room, and nobody had moved an inch.</p>
-      <div class="actions"><a class="btn" href="/week/01/">Play this week's case <span class="arrow" aria-hidden="true">&rarr;</span></a></div>
-    </div>
-    <div class="sheet"><a href="/week/01/">
-      <picture>
-        <source type="image/webp" srcset="/week/01/case-720.webp 720w, /week/01/case-1280.webp 1280w" sizes="(min-width: 60rem) 30rem, 100vw">
-        <img src="/week/01/case-720.jpg" srcset="/week/01/case-720.jpg 720w, /week/01/case-1280.jpg 1280w" sizes="(min-width: 60rem) 30rem, 100vw" width="720" height="540" loading="lazy" alt="The case page of The Empty Chair: a floor plan of Ashcombe Manor in autumn, six suspects and seven statements.">
-      </picture>
-    </a></div>
-  </div>
-</section>
-
-<section class="story">
-  <div class="wrap">
-    <p class="kicker">Ashcombe Manor, 1931</p>
-    <p class="big">Every Friday for a year, Lord Ashcombe's guests played a game. The lamps went out for one minute. When they came back on, one guest lay dead, and nobody had moved.</p>
-    <p>From what each guest said, work out where everyone stood, and who was alone with the body. Fifty nights at Ashcombe Manor, one murderer each time.</p>
-  </div>
-</section>
-
-<section class="rule">
-  <div class="wrap">
-    <p class="kicker">How to play</p>
-    <h2>One rule, three steps</h2>
-    <ol>
-      <li><p><strong>Read what each guest said.</strong> Every statement is true.</p></li>
-      <li><p><strong>Place one guest in every row and every column.</strong> No numbers, only people.</p></li>
-      <li><p><strong>The guest alone with the body is the murderer.</strong> Name them.</p></li>
-    </ol>
-    <div class="play">
-      <p>Try the practice case from the book, free, on your phone or computer.</p>
-      <div class="actions"><a class="btn" href="/play/practice/">Play a case now <span class="arrow" aria-hidden="true">&rarr;</span></a></div>
-    </div>
-  </div>
-</section>
-
-<section class="signup" id="signup">
-  <div class="wrap">
-    <p class="kicker">A free case by email</p>
-    <h2>Spend a Friday at Ashcombe Manor</h2>
-    <p>Get a free sample case to print or solve on a tablet, with its answer step by step. Then the case of the week every Friday, with news and offers now and then. Unsubscribe in one click.</p>
-    <form class="signup-form" action="https://assets.mailerlite.com/jsonp/2704082/forms/201064392963393270/subscribe" method="post" data-signup>
-      <label for="signup-email">Your email</label>
-      <div class="row">
-        <input id="signup-email" type="email" name="fields[email]" required autocomplete="email" placeholder="name@example.com">
-        <input type="hidden" name="ml-submit" value="1">
-        <input type="hidden" name="anticsrf" value="true">
-        <button class="btn" type="submit">Send me the case</button>
+<section class="shelf" id="shop">
+<!-- case-files:shelf -->
+<div class="wrap">
+  <p class="kicker">When one case is not enough</p>
+  <h2>More murder mysteries from Ashcombe Manor</h2>
+  <ul class="products">
+    <li class="product">
+      <a class="cover" href="/go/halloween/" tabindex="-1" aria-hidden="true"><span class="pack" style="--c:#b5541f"><span class="pw">Whereabouts</span><span class="pb">Murder in the Dark</span><span class="kh"><svg viewBox="0 0 40 60" aria-hidden="true"><path d="M20 3a12 12 0 0 1 6.3 22.2L31 57H9l4.7-31.8A12 12 0 0 1 20 3z" fill="rgba(13,21,36,0.5)" stroke="#c9a45c" stroke-width="1.6"/></svg></span><span class="pn">20<small>cases</small></span></span></a>
+      <div>
+        <p class="ribbon" data-until="2026-11-01">New for Halloween</p>
+        <h3>Murder in the Dark</h3>
+        <p class="what">Twenty murder mysteries from one Halloween night at Ashcombe Manor, every suspect in costume.</p>
+        <p class="facts">20 cases · Gentle to hard · PDF</p>
+        <div class="buy"><a class="btn-small" href="/go/halloween/">On Etsy <span class="arrow" aria-hidden="true">&rarr;</span></a></div>
       </div>
-      <p class="status" role="status" aria-live="polite"></p>
-      <p class="fine">We send it with MailerLite and count which emails are opened and which links are clicked, to make it better. Your address is used for these emails only, and never sold or passed on. <a href="/datenschutz/#en">Privacy notice, section 5</a></p>
-    </form>
-  </div>
+    </li>
+    <li class="product">
+      <a class="cover" href="/go/casebook/" tabindex="-1" aria-hidden="true"><picture><source type="image/webp" srcset="/img/cover-360.webp"><img src="/img/cover-360.jpg" width="360" height="544" loading="lazy" alt="The cover of Whereabouts: Murder Sudoku: one lit room in a dark house, with seven suspects in a row below."></picture></a>
+      <div>
+        <h3>Whereabouts: Murder Sudoku</h3>
+        <p class="what">The book: fifty murder mysteries from Ashcombe Manor, with three levels of hints for every case and every answer step by step.</p>
+        <p class="facts">50 cases · Gentle to expert</p>
+        <div class="buy"><a class="btn-small" href="/go/casebook/">Tablet edition on Etsy <span class="arrow" aria-hidden="true">&rarr;</span></a><a class="btn-small" href="/go/paperback/">Paperback on Amazon <span class="arrow" aria-hidden="true">&rarr;</span></a></div>
+      </div>
+    </li>
+    <li class="product">
+      <a class="cover" href="/go/beginners/" tabindex="-1" aria-hidden="true"><span class="pack" style="--c:#6c8f70"><span class="pw">Whereabouts</span><span class="pb">Beginner's Casebook</span><span class="kh"><svg viewBox="0 0 40 60" aria-hidden="true"><path d="M20 3a12 12 0 0 1 6.3 22.2L31 57H9l4.7-31.8A12 12 0 0 1 20 3z" fill="rgba(13,21,36,0.5)" stroke="#c9a45c" stroke-width="1.6"/></svg></span><span class="pn">12<small>cases</small></span></span></a>
+      <div>
+        <h3>The Beginner's Casebook</h3>
+        <p class="what">Twelve new cases to start with, six gentle and six standard.</p>
+        <p class="facts">12 cases · Gentle to standard · PDF</p>
+        <div class="buy"><a class="btn-small" href="/go/beginners/">On Etsy <span class="arrow" aria-hidden="true">&rarr;</span></a></div>
+      </div>
+    </li>
+    <li class="product">
+      <a class="cover" href="/go/experts/" tabindex="-1" aria-hidden="true"><span class="pack" style="--c:#6b1d25"><span class="pw">Whereabouts</span><span class="pb">Expert's Casebook</span><span class="kh"><svg viewBox="0 0 40 60" aria-hidden="true"><path d="M20 3a12 12 0 0 1 6.3 22.2L31 57H9l4.7-31.8A12 12 0 0 1 20 3z" fill="rgba(13,21,36,0.5)" stroke="#c9a45c" stroke-width="1.6"/></svg></span><span class="pn">12<small>cases</small></span></span></a>
+      <div>
+        <h3>The Expert's Casebook</h3>
+        <p class="what">Twelve new hard and expert cases, for solvers who want a long evening.</p>
+        <p class="facts">12 cases · Hard to expert · PDF</p>
+        <div class="buy"><a class="btn-small" href="/go/experts/">On Etsy <span class="arrow" aria-hidden="true">&rarr;</span></a></div>
+      </div>
+    </li>
+  </ul>
+</div>
+<!-- /case-files:shelf -->
 </section>
 
-<section class="inside">
+<!-- case-files:letter -->
+<section class="letter" id="signup">
   <div class="wrap">
-    <p class="kicker">A look inside</p>
-    <h2>A whole house on every page</h2>
-    <div class="cases">
-      <figure>
-        <div class="sheet"><a href="/img/practice-1280.jpg">
-          <picture>
-            <source type="image/webp" srcset="/img/practice-720.webp 720w, /img/practice-1280.webp 1280w" sizes="(min-width: 48rem) 30vw, 100vw">
-            <img src="/img/practice-720.jpg" srcset="/img/practice-720.jpg 720w, /img/practice-1280.jpg 1280w" sizes="(min-width: 48rem) 30vw, 100vw" width="720" height="540" loading="lazy" alt="The practice case: a floor plan with a drawing room, a gallery, a hall and a study, five suspects and five statements.">
-          </picture>
-        </a></div>
-        <figcaption><b>The practice case</b>Solved for you in the book, one step at a time.</figcaption>
-      </figure>
-      <figure>
-        <div class="sheet"><a href="/img/case-2-1280.jpg">
-          <picture>
-            <source type="image/webp" srcset="/img/case-2-720.webp 720w, /img/case-2-1280.webp 1280w" sizes="(min-width: 48rem) 30vw, 100vw">
-            <img src="/img/case-2-720.jpg" srcset="/img/case-2-720.jpg 720w, /img/case-2-1280.jpg 1280w" sizes="(min-width: 48rem) 30vw, 100vw" width="720" height="540" loading="lazy" alt="Case 2, Which Side of the Oak?: a garden with a great oak, a shed, a kitchen and a hall, six suspects and seven statements.">
-          </picture>
-        </a></div>
-        <figcaption><b>Case 2 · Gentle</b>Which Side of the Oak?</figcaption>
-      </figure>
-      <figure>
-        <div class="sheet"><a href="/img/case-16-1280.jpg">
-          <picture>
-            <source type="image/webp" srcset="/img/case-16-720.webp 720w, /img/case-16-1280.webp 1280w" sizes="(min-width: 48rem) 30vw, 100vw">
-            <img src="/img/case-16-720.jpg" srcset="/img/case-16-720.jpg 720w, /img/case-16-1280.jpg 1280w" sizes="(min-width: 48rem) 30vw, 100vw" width="720" height="540" loading="lazy" alt="Case 16, What the Lake Saw: a lake with a jetty, a study, a bedroom and a shed, six suspects and eight statements.">
-          </picture>
-        </a></div>
-        <figcaption><b>Case 16 · Standard</b>What the Lake Saw</figcaption>
-      </figure>
+    <div class="letter-card on-paper">
+      <div class="letter-stamp" aria-hidden="true"><svg viewBox="0 0 120 120" width="32" height="32"><rect width="120" height="120" rx="22" fill="#1a2843"/><rect x="22.5" y="22.5" width="75" height="75" fill="#f2b84b"/><g fill="#0d1524"><circle cx="60" cy="42" r="13"/><path d="M54.5 51V55.6C54.5 57.8 52.9 58.8 50.6 59.8C48 61 46.4 62.6 45.9 65.2L41.5 90Q60 88 78.5 90L74.1 65.2C73.6 62.6 72 61 69.4 59.8C67.1 58.8 65.5 57.8 65.5 55.6V51Z"/></g></svg></div>
+      <p class="kicker">The Friday letter</p>
+      <h2>Spend a Friday at Ashcombe Manor</h2>
+      <p>Get a free sample case to print or solve on a tablet, with its answer step by step. Then the case of the week every Friday, with news and offers now and then. Unsubscribe in one click.</p>
+      <form class="signup-form" action="https://assets.mailerlite.com/jsonp/2704082/forms/201064392963393270/subscribe" method="post" data-signup>
+        <label for="signup-email">Your email</label>
+        <div class="row">
+          <input id="signup-email" type="email" name="fields[email]" required autocomplete="email" placeholder="name@example.com">
+          <input type="hidden" name="ml-submit" value="1">
+          <input type="hidden" name="anticsrf" value="true">
+          <button class="btn" type="submit">Send me the case</button>
+        </div>
+        <p class="status" role="status" aria-live="polite"></p>
+        <p class="fine">We send it with MailerLite and count which emails are opened and which links are clicked, to make it better. Your address is used for these emails only, and never sold or passed on. <a href="/datenschutz/#en">Privacy notice, section 5</a></p>
+      </form>
     </div>
   </div>
 </section>
-
-<section class="contents">
-  <div class="wrap">
-    <p class="kicker">In the book</p>
-    <h2>Gentle to expert, spring to winter</h2>
-    <ul class="features">
-      <li>50 cases over four seasons, spring 1931 to winter 1932: twelve gentle ones to start, ten for experts at the end.</li>
-      <li>A practice case solved step by step, with a picture after every step.</li>
-      <li>Three levels of hints for every case, then the full solution, step by step.</li>
-      <li>Every case checked by our own solver software: one answer, never a guess.</li>
-      <li>The Ledger: write in each murderer's initial, and the shaded boxes spell out a hidden message.</li>
-    </ul>
-  </div>
-</section>
-
-<section class="editions">
-  <div class="wrap">
-    <p class="kicker">Two editions</p>
-    <h2>Solve it on a tablet, or in pen</h2>
-    <div class="cards">
-      <div class="edition">
-        <h3>The tablet edition</h3>
-        <p>One case to a screen, held sideways: the plan to write on, the statements beside it. Tap to a hint and straight back. Print a page at home if you like.</p>
-        <a class="btn" href="https://whereaboutspuzzles.etsy.com/listing/4588601306/murder-sudoku-mystery-puzzle-book-pdf-50">Tablet edition <span class="nw">on Etsy <span class="arrow" aria-hidden="true">&rarr;</span></span></a>
-      </div>
-      <div class="edition">
-        <h3>The paperback</h3>
-        <p>Every case as a two-page spread in color, with a grid big enough to solve in pen. 6&nbsp;x&nbsp;9&nbsp;inches, 170 pages.</p>
-        <a class="btn" href="https://www.amazon.com/dp/B0HM5DPV6X">Paperback <span class="nw">on Amazon <span class="arrow" aria-hidden="true">&rarr;</span></span></a>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- /case-files:letter -->
 
 </main>
 
@@ -196,21 +154,25 @@
   </div>
 </footer>
 <script src="/signup.js" defer></script>
+<!-- case-files:script -->
 <script>
-// AL-069: the first button plays the case the "case of the week" section shows, so it moves with that section when a
-// new week goes up, and nobody has to change it by hand. Without a script it scrolls to that section.
-(function () {
-  var week = document.querySelector('#this-week .actions a.btn');
-  var first = document.querySelector('[data-this-week]');
-  if (week && first) first.href = week.getAttribute('href');
-})();
-// AL-069: a profile link's ?utm_source= rides along to /go/ links, so the counter sees which platform's visitors went
-// on to the shop. It reads the page's own address only; nothing is stored or sent.
+// AL-072 (scripts/site/case-files.ts): a profile link's ?utm_source= rides along to this site's next pages and
+// forwarders, so the counter can follow each platform's visitors step by step; a NEW stamp or a season's line goes
+// once its day (data-until) has come. It reads this page's own address and today's date only; nothing is stored or sent.
 (function () {
   var s = new URLSearchParams(location.search).get('utm_source');
-  if (!s) return;
-  document.querySelectorAll('a[href^="/go/"]').forEach(function (a) { a.href = a.getAttribute('href') + '?utm_source=' + encodeURIComponent(s); });
+  if (s) document.querySelectorAll('a[href^="/"]').forEach(function (a) {
+    var u = new URL(a.getAttribute('href'), location.origin);
+    if (/\.\w+$/.test(u.pathname) || /^\/(impressum|datenschutz)\//.test(u.pathname)) return;
+    u.searchParams.set('utm_source', s);
+    a.setAttribute('href', u.pathname + u.search + u.hash);
+  });
+  var today = new Date().toISOString().slice(0, 10);
+  document.querySelectorAll('[data-until]').forEach(function (el) {
+    if (today >= el.getAttribute('data-until')) el.parentNode.removeChild(el);
+  });
 })();
 </script>
+<!-- /case-files:script -->
 </body>
 </html>
