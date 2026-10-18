@@ -580,21 +580,20 @@ h3 {
 }
 .letter-stamp svg { width: 100%; height: 100%; display: block; }
 
-/* The shelf: what to buy once one case is not enough. Each item is its cover and its buttons, one tap to the store
-   (through /go/, so the counter sees the tap). */
+/* The shelf: what to buy once one case is not enough. Each item is its photos (its approved Etsy listing photos,
+   Alexander, Oct 18) and its buttons, one tap to the store (through /go/, so the counter sees the tap). */
 .shelf { background: linear-gradient(var(--night), var(--deep)); }
 .shelf .intro { max-width: var(--measure); }
-.products { list-style: none; margin: 1.75rem 0 0; padding: 0; display: grid; gap: 1.1rem; }
+.products { list-style: none; margin: 1.75rem 0 0; padding: 0; display: grid; gap: 1.5rem; }
 .product {
-  display: grid; grid-template-columns: 6.25rem minmax(0, 1fr); gap: 1.1rem; align-items: start;
-  padding: 1.1rem; background: rgba(26, 40, 67, 0.6); border: 1px solid rgba(201, 164, 92, 0.3);
+  display: flex; flex-direction: column; overflow: hidden;
+  background: rgba(26, 40, 67, 0.6); border: 1px solid rgba(201, 164, 92, 0.3);
 }
-/* The cover's box is the pack drawing's measure: its sizes are in cqw, hundredths of the box's width. */
-.product .cover { display: block; container-type: inline-size; }
-.product .cover img { width: 100%; box-shadow: 0 8px 18px rgba(0, 0, 0, 0.55); }
+.product .info { display: flex; flex-direction: column; flex-grow: 1; padding: 0.9rem 1.1rem 1.15rem; }
+.product .info .buy { margin-top: auto; }
 .product h3 { margin: 0 0 0.3rem; font: 400 1.22rem/1.25 var(--serif); letter-spacing: 0; text-transform: none; color: var(--cream); }
 .product .what { margin: 0 0 0.45rem; font-size: 0.95rem; line-height: 1.5; color: var(--soft); }
-.product .facts { margin: 0 0 0.8rem; font: 700 0.7rem/1.4 var(--caps); letter-spacing: 0.16em; text-transform: uppercase; color: var(--brass); }
+.product .facts { margin: 0 0 0.85rem; font: 700 0.7rem/1.4 var(--caps); letter-spacing: 0.16em; text-transform: uppercase; color: var(--brass); }
 .product .buy { display: flex; flex-wrap: wrap; gap: 0.5rem; }
 .btn-small {
   display: inline-flex; align-items: center; gap: 0.45em; min-height: 2.75rem; padding: 0.65rem 0.9rem 0.5rem;
@@ -604,37 +603,40 @@ h3 {
 .btn-small:hover { background: var(--amber-hi); color: var(--night); }
 .btn-small .arrow { font-family: var(--serif); letter-spacing: 0; }
 .ribbon {
-  display: inline-block; margin: 0 0 0.45rem; padding: 0.32rem 0.5rem 0.2rem;
+  align-self: flex-start; display: inline-block; margin: 0 0 0.45rem; padding: 0.32rem 0.5rem 0.2rem;
   background: #e8762b; color: #120c08;
   font: 700 0.66rem/1 var(--caps); letter-spacing: 0.14em; text-transform: uppercase;
 }
 
-/* A pack's cover, drawn as its Etsy photo 1 is: the folder in the pack's colour, the brass rays, the band, the
-   keyhole and the count. No case on it (rule 4). */
-.pack {
-  --c: #b5541f;
-  position: relative; display: flex; flex-direction: column; align-items: center; gap: 6cqw;
-  aspect-ratio: 2 / 3; padding: 13cqw 5cqw 0;
-  background:
-    radial-gradient(closest-side at 50% 62%, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0) 70%),
-    repeating-conic-gradient(from 0deg at 50% 62%, rgba(255, 255, 255, 0.07) 0deg 4deg, rgba(255, 255, 255, 0) 4deg 12deg),
-    var(--c);
-  box-shadow: inset 0 0 0 3px var(--c), inset 0 0 0 4px rgba(201, 164, 92, 0.85), 0 8px 18px rgba(0, 0, 0, 0.55);
+/* A product's photos: one at a time, swiped on a phone (each snaps into place), stepped with arrows where there is a
+   mouse, a dot for each (case-files.ts writes it, its few lines of script move the dot and the arrows). */
+.gallery { position: relative; }
+.gallery .slides {
+  display: flex; overflow-x: auto; scroll-snap-type: x mandatory; overscroll-behavior-x: contain;
+  scrollbar-width: none; background: var(--night);
 }
-.pack .pw { font: 400 12.4cqw/1 var(--deco); letter-spacing: 0; text-transform: uppercase; color: var(--cream); white-space: nowrap; }
-.pack .pb {
-  padding: 2.6cqw 3.5cqw 1.6cqw; background: var(--amber); color: var(--night); text-align: center;
-  font: 700 7.4cqw/1.12 var(--caps); letter-spacing: 0.06em; text-transform: uppercase;
+.gallery .slides::-webkit-scrollbar { display: none; }
+.gallery .slide { flex: 0 0 100%; scroll-snap-align: start; aspect-ratio: 4 / 3; }
+.gallery .slide img { width: 100%; height: 100%; object-fit: cover; }
+.gallery .slide { position: relative; }
+.gallery .tag {
+  position: absolute; left: 0.6rem; top: 0.6rem; padding: 0.3rem 0.5rem 0.18rem;
+  background: rgba(13, 21, 36, 0.85); border: 1px solid rgba(201, 164, 92, 0.7); color: var(--cream);
+  font: 700 0.66rem/1 var(--caps); letter-spacing: 0.14em; text-transform: uppercase;
 }
-.pack .kh { width: 40cqw; margin-top: 4cqw; }
-.pack .kh svg { display: block; width: 100%; height: auto; }
-.pack .pn {
-  position: absolute; right: -7cqw; bottom: -7cqw; width: 38cqw; height: 38cqw; border-radius: 50%;
-  display: flex; flex-direction: column; align-items: center; justify-content: center;
-  background: var(--amber); color: var(--night); box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
-  font: 700 15cqw/0.9 var(--caps);
+.gallery .dots { position: absolute; left: 0; right: 0; bottom: 0.55rem; display: flex; justify-content: center; gap: 0.4rem; pointer-events: none; }
+.gallery .dots i { width: 0.45rem; height: 0.45rem; border-radius: 50%; background: rgba(243, 233, 210, 0.45); box-shadow: 0 0 0 1px rgba(13, 21, 36, 0.5); }
+.gallery .dots i.on { background: var(--amber); }
+.gallery .step {
+  position: absolute; top: calc(50% - 1.25rem); width: 2.5rem; height: 2.5rem; padding: 0 0 0.15rem; border-radius: 50%;
+  border: 1px solid rgba(201, 164, 92, 0.7); background: rgba(13, 21, 36, 0.78); color: var(--cream);
+  font: 400 1.7rem/1 var(--serif); cursor: pointer; opacity: 0; transition: opacity 0.15s;
 }
-.pack .pn small { font: 700 5.6cqw/1.3 var(--caps); letter-spacing: 0.1em; text-transform: uppercase; }
+.gallery .step.prev { left: 0.6rem; }
+.gallery .step.next { right: 0.6rem; }
+.gallery:hover .step, .gallery .step:focus-visible { opacity: 1; }
+.gallery .step:hover { border-color: var(--amber); color: var(--amber-hi); }
+@media (hover: none) { .gallery .step { display: none; } }
 
 /* The case files page. */
 .files-head { padding: 2.25rem 0 1.5rem; background: radial-gradient(ellipse 110% 90% at 50% 0%, var(--glow) 0%, var(--night) 70%); }
@@ -644,10 +646,6 @@ h3 {
 .topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
 .topbar a.topbar-link { font: 700 0.78rem/1.2 var(--caps); letter-spacing: 0.16em; color: var(--amber); }
 
-/* The narrowest phones: a smaller cover beside each product, so its buttons keep their room. */
-@media (max-width: 22rem) {
-  .product { grid-template-columns: 4.75rem minmax(0, 1fr); gap: 0.9rem; padding: 0.95rem; }
-}
 @media (min-width: 48rem) {
   .files { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2.5rem 2rem; align-items: start; }
   .products { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -664,7 +662,4 @@ h3 {
   .lead .ask p { font-size: 1.2rem; }
   .lead .all { text-align: left; margin: 1.5rem 0 0; }
   .lead .newest { grid-column: 2; grid-row: 1 / span 3; }
-  .products { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-  .product { grid-template-columns: 1fr; }
-  .product .cover { width: 72%; margin: 0 auto 0.4rem; }
 }
