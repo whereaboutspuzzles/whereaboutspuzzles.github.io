@@ -4,6 +4,7 @@
      a Friday's player (/play/week-NN/) and, on its Saturday, its answer; node scripts/site/case-files.ts --check says what is missing. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://whereaboutspuzzles.com/</loc><lastmod>2026-10-17</lastmod></url>
+  <url><loc>https://whereaboutspuzzles.com/preise/</loc><lastmod>2026-10-21</lastmod></url>
   <url><loc>https://whereaboutspuzzles.com/cases/</loc><lastmod>2026-10-17</lastmod></url>
   <url><loc>https://whereaboutspuzzles.com/play/practice/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://whereaboutspuzzles.com/week/01/answer/</loc><lastmod>2026-10-17</lastmod></url>
