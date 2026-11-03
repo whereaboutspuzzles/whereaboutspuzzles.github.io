@@ -663,3 +663,28 @@ h3 {
   .lead .all { text-align: left; margin: 1.5rem 0 0; }
   .lead .newest { grid-column: 2; grid-row: 1 / span 3; }
 }
+
+/* Christmas (AL-123): the season's line and the season's product in Christmas at Ashcombe's holly green, as its Etsy
+   photo 1 draws the pack, with the house's brass. case-files.json's `dress: "christmas"` puts the class on them. On a
+   wide screen the season's product spans the shelf, its photos beside its words. Kept apart, as the sections above. */
+.season-line.dress-christmas {
+  background: #1d5236; color: var(--cream);
+  border-bottom: 2px solid var(--brass);
+}
+.season-line.dress-christmas a:hover { color: var(--amber-hi); }
+.product.dress-christmas {
+  background: linear-gradient(165deg, #1f5639 0%, #143d29 60%, #0f2f20 100%);
+  border-color: rgba(201, 164, 92, 0.75);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+.product.dress-christmas .ribbon { background: var(--brass); color: #0f2f20; }
+.product.dress-christmas .what { color: var(--cream); }
+.product.dress-christmas .facts { color: #e2c98f; }
+@media (min-width: 48rem) {
+  .product.dress-christmas { grid-column: 1 / -1; flex-direction: row; }
+  .product.dress-christmas .gallery { flex: 0 0 58%; min-width: 0; }
+  .product.dress-christmas .info { justify-content: center; padding: 1.6rem 1.8rem; }
+  .product.dress-christmas .info .buy { margin-top: 0.4rem; }
+  .product.dress-christmas h3 { font-size: 1.7rem; }
+  .product.dress-christmas .what { font-size: 1.05rem; }
+}
