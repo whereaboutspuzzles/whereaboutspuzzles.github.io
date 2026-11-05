@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- The pages Google may list. The Impressum, the Datenschutzerklärung, /review/, /review-2/, /rezension/ and /pins/ stay out (they carry noindex
+<!-- The pages Google may list. The Impressum, the Datenschutzerklärung, /review/, /review-2/, /rezension/, /rezension-2/ and /pins/ stay out (they carry noindex
      or are not pages), and so do the addresses that only forward (/week/NN/, /sample/, /go/...). Add each new public page here:
      a Friday's player (/play/week-NN/) and, on its Saturday, its answer; node scripts/site/case-files.ts --check says what is missing. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
