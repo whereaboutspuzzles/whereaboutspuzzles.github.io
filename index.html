@@ -24,8 +24,47 @@
 <link rel="preload" href="/fonts/limelight.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/josefin-sans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/site.css?v=0941357a">
+<!-- case-files:hreflang -->
+<link rel="alternate" hreflang="en" href="https://whereaboutspuzzles.com/">
+<link rel="alternate" hreflang="de" href="https://whereaboutspuzzles.com/de/">
+<link rel="alternate" hreflang="x-default" href="https://whereaboutspuzzles.com/">
+<!-- /case-files:hreflang -->
 </head>
 <body>
+<!-- case-files:lang -->
+<style>
+  .lang-switch { max-width: 1120px; margin: 0 auto; padding: 6px 16px 0; display: flex; flex-wrap: wrap; justify-content: flex-end; align-items: center; gap: 4px 14px; }
+  .lang-switch a { font: 700 11px/1.2 var(--caps, var(--ui, sans-serif)); letter-spacing: .14em; text-transform: uppercase; color: var(--soft, #e4dac3); text-decoration: none; padding: 9px 2px; }
+  .lang-switch a:hover { color: var(--amber, #f2b84b); }
+  .lang-switch .lang-offer { color: var(--amber, #f2b84b); text-transform: none; letter-spacing: .02em; font-size: 13px; }
+  .lang-switch .lang-offer[hidden] { display: none; }
+</style>
+<nav class="lang-switch" aria-label="Language"><a class="lang-offer" href="/de/" hreflang="de" lang="de" hidden>Diese Seite gibt es auch auf Deutsch &rarr;</a><a href="/de/" hreflang="de" lang="de">Deutsch</a></nav>
+<script>
+// AL-135 (scripts/site/case-files.ts): the browser's language as a hint. A reader whose browser asks first for
+// German sees the line that offers German. The switch's choice is kept in this browser only (whereabouts-lang). On a first visit from another site, a German browser goes on to /de/; a choice made with the switch is kept for good. Search crawlers are never moved. Nothing is sent.
+(function () {
+  var first = String((navigator.languages && navigator.languages[0]) || navigator.language || '').toLowerCase();
+  var german = first.slice(0, 2) === 'de';
+  var kept = null;
+  try { kept = localStorage.getItem("whereabouts-lang"); } catch (e) { /* no storage: as on a first visit */ }
+  document.querySelectorAll('.lang-switch a').forEach(function (a) {
+    a.addEventListener('click', function () { try { localStorage.setItem("whereabouts-lang", "de"); } catch (e) { /* not kept */ } });
+  });
+  var crawler = navigator.webdriver || /bot|crawl|spider|slurp|preview|lighthouse|headless/i.test(navigator.userAgent);
+  var fromHere = document.referrer && document.referrer.indexOf(location.origin + '/') === 0;
+  if (kept === 'de') { location.replace("/de/" + location.search); return; }
+  if (kept === null && german && !crawler && !fromHere) {
+    try { localStorage.setItem("whereabouts-lang", 'seen'); } catch (e) { /* not kept */ }
+    location.replace("/de/" + location.search);
+    return;
+  }
+  if (german !== true || kept === "en") return;
+  var a = document.querySelector('.lang-switch .lang-offer');
+  if (a) a.hidden = false;
+})();
+</script>
+<!-- /case-files:lang -->
 <a class="skip" href="#main">Skip to the page</a>
 <!-- AL-072: one look per job and one next step. The blocks between case-files markers are written by
      scripts/site/case-files.ts from scripts/site/case-files.json: change those, never the blocks. The first button is
