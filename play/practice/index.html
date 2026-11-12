@@ -1743,19 +1743,5 @@ else openHowTo();
 })();
 </script>
 <!-- /case-files:script -->
-<!-- case-files:shop -->
-<script>
-// AL-134 (scripts/site/case-files.ts): the Etsy shop is closed for now, so the case's last button goes to paperback.
-// Only the website's copy of the page has this; the player itself is untouched. Gone once case-files.json's "etsy" is open.
-(function () {
-  var a = document.querySelector('#more a[href*="etsy.com"]');
-  if (!a) return;
-  a.href = "/go/paperback/";
-  a.textContent = "The paperback on Amazon";
-  var p = document.querySelector('#more p:not(.lead)');
-  if (p) p.textContent = "Whereabouts: Murder Sudoku, the paperback: 50 murder mysteries from Ashcombe Manor, with three levels of hints and every solution step by step.";
-})();
-</script>
-<!-- /case-files:shop -->
 </body>
 </html>

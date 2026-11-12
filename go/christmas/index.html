@@ -3,33 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Back soon · Whereabouts</title>
+<title>Christmas at Ashcombe on Etsy</title>
 <meta name="robots" content="noindex">
-<!-- AL-134: the Etsy shop is closed for now, so this hop stays here instead of going on to Etsy (https://www.etsy.com/listing/4608132914). Written by scripts/site/case-files.ts from case-files.json ("etsy"); it forwards again once "open" is true. -->
+<!-- AL-069, AL-072: the site's links to this product come here, so the counter sees each tap, then go on to Etsy. Written by scripts/site/case-files.ts from case-files.json. -->
+<link rel="canonical" href="https://www.etsy.com/listing/4608132914">
+<meta http-equiv="refresh" content="0; url=https://www.etsy.com/listing/4608132914">
+<script>location.replace("https://www.etsy.com/listing/4608132914");</script>
 </head>
 <body style="margin:0;padding:3em 1em;background:#0d1524;color:#e4dac3;font:17px/1.6 Georgia,serif;text-align:center">
 <p>Christmas at Ashcombe: 12 Christmas murder mysteries from Ashcombe Manor.</p>
-<p>Our Etsy shop is closed for now. In the meantime:</p>
-<p><a href="/go/paperback-2/" style="color:#f2b84b">Book 2, the Christmas paperback, on Amazon</a></p>
-<p><a href="/go/paperback/" style="color:#f2b84b">Book 1, the paperback, on Amazon</a></p>
-<p><a href="/cases/" style="color:#f2b84b">Play a free case now</a></p>
-<script>
-// AL-072 (scripts/site/case-files.ts): a profile link's ?utm_source= rides along to this site's next pages and
-// forwarders, so the counter can follow each platform's visitors step by step; a NEW stamp or a season's line goes
-// once its day (data-until) has come. It reads this page's own address and today's date only; nothing is stored or sent.
-(function () {
-  var s = new URLSearchParams(location.search).get('utm_source');
-  if (s) document.querySelectorAll('a[href^="/"]').forEach(function (a) {
-    var u = new URL(a.getAttribute('href'), location.origin);
-    if (/\.\w+$/.test(u.pathname) || /^\/(impressum|datenschutz)\//.test(u.pathname)) return;
-    u.searchParams.set('utm_source', s);
-    a.setAttribute('href', u.pathname + u.search + u.hash);
-  });
-  var today = new Date().toISOString().slice(0, 10);
-  document.querySelectorAll('[data-until]').forEach(function (el) {
-    if (today >= el.getAttribute('data-until')) el.parentNode.removeChild(el);
-  });
-})();
-</script>
+<p><a href="https://www.etsy.com/listing/4608132914" style="color:#f2b84b">Continue to Etsy</a></p>
 </body>
 </html>

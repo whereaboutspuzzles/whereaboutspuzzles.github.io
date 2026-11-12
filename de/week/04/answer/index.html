@@ -138,12 +138,6 @@
 <div class="wrap">
   <p class="kicker">Wenn ein Fall nicht reicht</p>
   <h2>Mehr Mordfälle aus Ashcombe Manor</h2>
-  <style>
-  /* AL-134 (scripts/site/case-files.ts): while the Etsy shop is closed; written with the shelf, gone with the switch. */
-  .shop-note { max-width: var(--measure); margin: 0 0 1.4rem; padding: 0.8rem 1rem; border: 1px solid rgba(201, 164, 92, 0.55); color: var(--soft); font-size: 0.98rem; line-height: 1.5; }
-  .btn-small.soon { background: transparent; box-shadow: inset 0 0 0 2px rgba(201, 164, 92, 0.55); color: var(--soft); cursor: default; }
-  </style>
-  <p class="shop-note">Unser Etsy-Shop mit den PDF-Ausgaben ist im Moment geschlossen. Die Taschenbücher gibt es wie immer bei Amazon, und alle kostenlosen Fälle kannst du hier spielen.</p>
   <ul class="products">
     <li class="product dress-christmas">
       <div class="gallery">
@@ -186,7 +180,7 @@
         <h3>Whereabouts: Murder Sudoku, die Tablet-Ausgabe</h3>
         <p class="what">Das englische Buch als PDF für iPad und Tablets: fünfzig Mordfälle aus Ashcombe Manor, mit Tipps in drei Stufen für jeden Fall und allen Lösungen Schritt für Schritt.</p>
         <p class="facts">50 Fälle · Leicht bis Experte · PDF · auf Englisch</p>
-        <div class="buy"><span class="btn-small soon">Bei Etsy, auf Englisch: bald wieder da</span></div>
+        <div class="buy"><a class="btn-small" href="/go/casebook/">Bei Etsy, auf Englisch <span class="arrow" aria-hidden="true">&rarr;</span></a></div>
       </div>
     </li>
     <li class="product dress-christmas">
@@ -205,7 +199,26 @@
         <h3>Christmas at Ashcombe</h3>
         <p class="what">Zwölf Mordfälle, einer für jeden der zwölf Tage von Weihnachten bis Dreikönig, in Ashcombe Manor im Festtagsschmuck.</p>
         <p class="facts">12 Fälle · Leicht bis Experte · PDF · auf Englisch</p>
-        <div class="buy"><span class="btn-small soon">Bei Etsy, auf Englisch: bald wieder da</span></div>
+        <div class="buy"><a class="btn-small" href="/go/christmas/">Bei Etsy, auf Englisch <span class="arrow" aria-hidden="true">&rarr;</span></a></div>
+      </div>
+    </li>
+    <li class="product dress-christmas">
+      <div class="gallery" data-gallery>
+        <div class="slides" role="group" aria-label="The Advent Casebook: 3 Fotos">
+          <a class="slide" href="/go/advent/"><picture><source type="image/webp" srcset="/img/shop/advent-1-480.webp 480w, /img/shop/advent-1-720.webp 720w, /img/shop/advent-1-960.webp 960w" sizes="(min-width: 70rem) 520px, (min-width: 48rem) 46vw, 92vw"><img src="/img/shop/advent-1-720.jpg" width="720" height="540" loading="lazy" decoding="async" alt="The Advent Casebook, ein Whereabouts-Paket mit Krimi-Sudokus, als rote Fallakte Nr. 7: ein verschneiter Gartenplan, ein Schlüsselloch mit Blick auf einen Weihnachtsbaum in einer Halle, vier von fünf Lupen, Leicht bis Experte, 24 Fälle."></picture></a>
+          <a class="slide" href="/go/advent/" tabindex="-1"><picture><source type="image/webp" srcset="/img/shop/advent-2-480.webp 480w, /img/shop/advent-2-720.webp 720w, /img/shop/advent-2-960.webp 960w" sizes="(min-width: 70rem) 520px, (min-width: 48rem) 46vw, 92vw"><img src="/img/shop/advent-2-720.jpg" width="720" height="540" loading="lazy" decoding="async" alt="Vier Grundrisse aus dem Paket auf vier Tablets, beschriftet 1., 9., 17. und 24. Dezember, ein Landhaus in Pixel-Art, Tag für Tag mehr geschmückt: schlichte Räume, eine lange Tafel, ein Schneemann im Schnee, ein großer Weihnachtsbaum in der Halle."></picture></a>
+          <a class="slide" href="/go/advent/" tabindex="-1"><picture><source type="image/webp" srcset="/img/shop/advent-3-480.webp 480w, /img/shop/advent-3-720.webp 720w, /img/shop/advent-3-960.webp 960w" sizes="(min-width: 70rem) 520px, (min-width: 48rem) 46vw, 92vw"><img src="/img/shop/advent-3-720.jpg" width="720" height="540" loading="lazy" decoding="async" alt="Die erste Seite des PDFs auf einem Tablet, der Fallakten-Umschlag des Pakets, daneben eine Liste: 24 neue illustrierte Fälle, einer pro Tag, leicht bis Experte, ein Übungsfall, Tipps und alle Lösungen, 75 Seiten im Querformat für Tablets."></picture></a>
+        </div>
+        <button class="step prev" type="button" data-step="-1" aria-label="Das Foto davor" hidden>&lsaquo;</button>
+        <button class="step next" type="button" data-step="1" aria-label="Das nächste Foto" hidden>&rsaquo;</button>
+        <div class="dots" aria-hidden="true"><i class="on"></i><i></i><i></i></div>
+      </div>
+      <div class="info">
+        <p class="ribbon" data-until="2026-12-25">Neu zum Advent</p>
+        <h3>The Advent Casebook</h3>
+        <p class="what">Vierundzwanzig Mordfälle, einer für jeden Tag vom 1. Dezember bis Heiligabend, in Ashcombe Manor, das sich jeden Tag ein wenig mehr für Weihnachten schmückt.</p>
+        <p class="facts">24 Fälle · Leicht bis Experte · PDF · auf Englisch</p>
+        <div class="buy"><a class="btn-small" href="/go/advent/">Bei Etsy, auf Englisch <span class="arrow" aria-hidden="true">&rarr;</span></a></div>
       </div>
     </li>
     <li class="product">
@@ -223,7 +236,7 @@
         <h3>The Beginner's Casebook</h3>
         <p class="what">Zwölf neue Fälle für den Anfang, sechs leichte und sechs mittlere.</p>
         <p class="facts">12 Fälle · Leicht bis Mittel · PDF · auf Englisch</p>
-        <div class="buy"><span class="btn-small soon">Bei Etsy, auf Englisch: bald wieder da</span></div>
+        <div class="buy"><a class="btn-small" href="/go/beginners/">Bei Etsy, auf Englisch <span class="arrow" aria-hidden="true">&rarr;</span></a></div>
       </div>
     </li>
     <li class="product">
@@ -241,7 +254,7 @@
         <h3>The Expert's Casebook</h3>
         <p class="what">Zwölf neue Fälle von Schwer bis Experte, für einen langen Abend.</p>
         <p class="facts">12 Fälle · Schwer bis Experte · PDF · auf Englisch</p>
-        <div class="buy"><span class="btn-small soon">Bei Etsy, auf Englisch: bald wieder da</span></div>
+        <div class="buy"><a class="btn-small" href="/go/experts/">Bei Etsy, auf Englisch <span class="arrow" aria-hidden="true">&rarr;</span></a></div>
       </div>
     </li>
     <li class="product">
@@ -259,7 +272,7 @@
         <h3>Murder in the Dark</h3>
         <p class="what">Zwanzig Mordfälle aus einer Halloween-Nacht in Ashcombe Manor, jeder Verdächtige im Kostüm.</p>
         <p class="facts">20 Fälle · Leicht bis Schwer · PDF · auf Englisch</p>
-        <div class="buy"><span class="btn-small soon">Bei Etsy, auf Englisch: bald wieder da</span></div>
+        <div class="buy"><a class="btn-small" href="/go/halloween/">Bei Etsy, auf Englisch <span class="arrow" aria-hidden="true">&rarr;</span></a></div>
       </div>
     </li>
   </ul>
